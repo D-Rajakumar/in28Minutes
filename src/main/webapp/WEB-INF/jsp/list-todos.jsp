@@ -2,12 +2,15 @@
 <html>
 	<head>
 	
-		<title> My First Web Application </title>
+		<title> Todo's for ${name} </title>
+		<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	    		rel="stylesheet">
 	
 	</head>
 	<body>
-		<H1> Your Todo's</H1>
-		<table>
+		<div class="container">
+		
+		<table class="table table-striped" >
 		
 			<caption> Your Todo's are </caption>
 			<thead> 
@@ -37,8 +40,13 @@
 		
 		</table>
 
-		<BR/>
-		<a href="/add-todo"> Add a Todo </a>
+		
+		<div> <a class = "button" href="/add-todo"> Add a Todo </a> </div>
+		
+		<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+	    <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		
+	  </div>	
 	</body>
 
 </html>
