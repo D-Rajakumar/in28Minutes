@@ -12,7 +12,7 @@
 			<caption> Your Todo's are </caption>
 			<thead> 
 				<tr> 
-					
+					<th> User ID </th>
 					<th>Description </th>
 					<th>Target Date </th>
 					<th>Is it done </th>
@@ -24,7 +24,7 @@
 			
 				<c:forEach items = "${todos}" var = "item">
 					<tr> 
-						
+						<td>${item.user}</td>
 						<td>${item.desc} </td>
 						<td>${item.targetDate} </td>
 						<td>${item.done} </td>	
