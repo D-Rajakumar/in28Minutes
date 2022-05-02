@@ -15,22 +15,24 @@
 			<caption> Your Todo's are </caption>
 			<thead> 
 				<tr> 
-					<th> User ID </th>
+					<th>User ID </th>
 					<th>Description </th>
 					<th>Target Date </th>
 					<th>Is it done </th>
+					<th>Delete</th>
 				</tr>
 			</thead>
 			
 			<tbody>
 			
 			
-				<c:forEach items = "${todos}" var = "item">
+				<c:forEach items = "${todos}" var = "todo">
 					<tr> 
-						<td>${item.user}</td>
-						<td>${item.desc} </td>
-						<td>${item.targetDate} </td>
-						<td>${item.done} </td>	
+						<td>${todo.user}</td>
+						<td>${todo.desc} </td>
+						<td>${todo.targetDate} </td>
+						<td>${todo.done} </td>	
+						<td><a type="button" class="btn btn-warning" href="/delete-todo?id=${todo.id}">Delete</a></td>
 					</tr>
 				
 				</c:forEach>
