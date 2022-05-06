@@ -2,6 +2,7 @@ package com.in28minutes.springboot.web.controller;
 
 import java.util.Date;
 
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -48,7 +49,11 @@ public class TodoController {
 	
 	@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
 	
-	public String addTodo( ModelMap model, Todo todo) {
+	public String addTodo( ModelMap model, @Valid Todo todo, BindingResult result) {
+		
+		if( result.hasErrors()) {
+			return("todo");
+		}
 	
 		service.addTodo((String) model.get("name"), todo.getDesc(), new Date(), false);
 		
