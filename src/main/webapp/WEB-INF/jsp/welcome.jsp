@@ -1,17 +1,12 @@
-<html>
-	<head>
-	
-		<title> My First Web Application </title>
-	
-	</head>
-	<body>
+<%@ include file="common/header.jspf" %>
+<%@ include file="common/navigation.jspf" %>
 
-		<form method="post">
+<div class="container">
+		
 		
 		Welcome ${name} <a href="list-todos" >Click here</a> to manage your Todos
 		
-		</form>
+		
+</div>
 	
-	</body>
-
-</html>
+<%@ include file="common/footer.jspf" %>

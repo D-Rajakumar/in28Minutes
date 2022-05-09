@@ -1,23 +1,18 @@
-<html>
-<head>
+<%@ include file="common/header.jspf" %>
+<%@ include file="common/navigation.jspf" %>
 
-	<title> My First Web Application </title>
+<div class="container">
 
-</head>
-<body>
+	<form method="post">
+	
+		Name: 		<input type="text" name = "name"/>
+		Password: 	<input type="password" name = "password"/>
+			 		<input type="Submit"/>
 
+	</form>
+	
+	<font Color=Red> ${errorMessage}</font>
 
-<form method="post">
+</div>
 
-Name: <input type="text" name = "name"/>
-Password: 	  <input type="password" name = "password"/>
-	  <input type="Submit"/>
-
-
-
-</form>
-
-<font Color=Red> ${errorMessage}</font>
-</body>
-
-</html>
+<%@ include file="common/footer.jspf" %>
