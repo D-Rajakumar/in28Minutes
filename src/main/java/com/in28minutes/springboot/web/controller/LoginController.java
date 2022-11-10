@@ -24,6 +24,6 @@ public class LoginController {
 		return("welcome");
 	}
 
-// GitHub
+
 	
 }
